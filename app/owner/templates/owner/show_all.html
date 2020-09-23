@@ -1,0 +1,14 @@
+{% extends 'owner/base.html' %}}
+
+
+{% block title %}
+Owners
+{% endblock %}
+{% block content %}
+{% for owner in owners %}
+    <a href="{{ url_for('owner.show_pets', index=owner.id) }}">
+    <div>{{ owner }}</div>
+    </a>
+{% endfor %}
+
+{% endblock %}

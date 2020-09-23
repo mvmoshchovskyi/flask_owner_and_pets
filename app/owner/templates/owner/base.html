@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }}>
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+</head>
+<body>
+<div class="header">
+    <div class="label">Owner@Pets</div>
+    <div class="nav">
+        <a href="{{url_for('owner.show_all')}}">
+            <div>Show all owners</div>
+        </a>
+        <a href="{{url_for('owner.register')}}">
+            <div>Register owner</div>
+        </a>
+        {% block add_items %}
+
+        {% endblock %}
+    </div>
+</div>
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>
